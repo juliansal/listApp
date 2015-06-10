@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Contact List App</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+	</head>
+	<body>
+		<div class="container"  ng-app="myApp" ng-controller="appCtrl">
+			<h1>Contact List App</h1>
+			<div class="table-responsive">
+				<table class="table">
+					<thead>
+						<tr>
+							<th>Name</th>
+							<th>Email</th>
+							<th>Number</th>
+							<th>Action</th>
+							<th><button class="btn btn-info" ng-click="deselct()">Clear</button></th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><input class="form-control" ng-model="contact.name" /></td>
+							<td><input class="form-control" ng-model="contact.email" /></td>
+							<td><input class="form-control" ng-model="contact.number" /></td>
+							<td><button class="btn btn-primary" ng-click="addContact()">Submit</button></td>
+							<td><button id="update" class="btn btn-info disabled" ng-click="update()">Update</button></td>
+						</tr>
+						<tr ng-repeat="contact in contactlist">
+							<td id="name">{{contact.name}}</td>
+							<td id="email">{{contact.email}}</td>
+							<td id="number">{{contact.number}}</td>
+							<td><button class="btn btn-danger" ng-click="remove(contact._id)">Remove</button></td>
+							<td><button class="btn btn-warning" ng-click="edit(contact._id)">Edit</button></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+		<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+		<script src="controllers/controller.js"></script>
+	</body>
+</html>
