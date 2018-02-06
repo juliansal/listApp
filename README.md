@@ -1,8 +1,8 @@
 # listApp
-Simple contact list app using Angular, Node, and Mongo
+Simple contact list app using AngularJS, Node, and Mongo
 
 This contact list is the first phase of a larger project. Thanks to the "meanstacktutorial" tutorial from Michael Cheng 
-(https://github.com/michaelcheng429) I'm now able to get a good starting point for my own Angular/Node projects. I am 
+(https://github.com/michaelcheng429) I'm now able to get a good starting point for my own AngularJS/Node projects. I am 
 extending functionality from Michael's original tutorial. My version of the contact list app will include client-side and 
 server-side validation.
 
